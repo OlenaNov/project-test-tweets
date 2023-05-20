@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkproject_test_tweets=self.webpackChunkproject_test_tweets||[]).push([[273],{2273:function(e,t,n){n.r(t),n.d(t,{default:function(){return o}});var s=n(184),r=n(1087).NavLink,o=function(){return(0,s.jsx)("div",{children:(0,s.jsxs)("p",{children:["OOps! Page not found! Maybe the page is out of date. Want to return to ",(0,s.jsx)(r,{to:"/",children:"Home page"}),"?"]})})}}}]);
+//# sourceMappingURL=273.9fd307de.chunk.js.map
