@@ -8,7 +8,7 @@ const Tweets = () => {
     const [users, setUsers] = useState([]);
     const isMounted = useRef(false);
 
-    const makeRequest = async () => {
+    const makeRequest = async users => {
             
         const nextPage = Math.round(users.length / 6 + 1);
     
@@ -26,9 +26,9 @@ const Tweets = () => {
         };
 
         isMounted.current = true;
-        makeRequest();
+        makeRequest(users);
 
-    }, [isMounted]);
+    }, [isMounted, users]);
 
     const updateState = dataUser => {
 
@@ -45,7 +45,7 @@ const Tweets = () => {
         <>
             <NavLink to='/'>Go back</NavLink>
             {users.length !== 0 && <UserList items={users} updateStateUser={updateState}/>}
-            {users.length !== 0 && <button onClick={() => makeRequest()}>Load more...</button>}
+            {users.length !== 0 && <button onClick={() => makeRequest(users)}>Load more...</button>}
         </>
     );
 };
