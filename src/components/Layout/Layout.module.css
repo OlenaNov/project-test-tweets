@@ -1,0 +1,19 @@
+
+.header {
+    padding: 20px;
+    background-color: #5736A3;
+}
+
+.header__navig {
+    display: flex;
+    gap: 28px;
+}
+
+.header__navLink {
+    color: #EBD8FF;
+}
+
+.header__navLink.active {
+
+        color: #5CD3A8;
+}
