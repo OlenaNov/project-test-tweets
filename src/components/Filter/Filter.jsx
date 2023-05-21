@@ -1,7 +1,7 @@
 import Select from 'react-select';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-
 import { fetchUsers } from "utilites/api";
+import css from './Filter.module.css';
 
 const options = [
   { value: 'all', label: 'ALL' },
@@ -43,8 +43,9 @@ const Filter = ({ onVisible }) => {
 
   return (
     <Select 
-  options={options}
-  onChange={option => makeFilter(option.value)}
+        className={css.select}
+        options={options}
+        onChange={option => makeFilter(option.value)}
    />
   )
 };
