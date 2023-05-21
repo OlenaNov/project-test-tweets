@@ -1,17 +1,105 @@
 
+.item__box {
+    width: 100%;
+    height: 100%;
 
-.usersList__img {
-    width: 80px;
-    height: 80px;
-    margin-top: 178px;
-    margin-left: 150px;
-    margin-right: 150px;
+    background-image: url('../../images/backgroundCard.png');
+    background-repeat: no-repeat;
+    background-position: 28px 36px;
 }
 
-.following {
+.item__icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 76px;
+    height: 22px;
+    fill: rgba(255, 255, 255, 0.3);
+}
+
+.item__box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 214px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+
+    background: #EBD8FF;
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06), inset 0px -1.71846px 3.43693px #AE7BE3, inset 0px 3.43693px 2.5777px #FBF8FF;
+}
+
+.item__box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 178px;
+    left: calc((100% - 80px) / 2);
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+
+    border-radius: 50%;
+    background: #EBD8FF;
+    box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), inset 0px -2.19582px 4.39163px #AE7BE3, inset 0px 4.39163px 3.29372px #FBF8FF;
+}
+
+.item__img {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: 187.40px;
+    left: calc((100% - 62px) / 2);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.item__boxContent {
+    padding-top: 284px;
+    margin-bottom: 26px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+}
+
+.item__content {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    color: #EBD8FF;
+}
+
+.item__btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 28px;
+    gap: 6px;
+
+    width: 196px;
+    height: 50px;
+
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+    border-radius: 10.3108px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.22;
+    text-transform: uppercase;
+    color: #373737;
+}
+
+.item__following {
     background-color: #5CD3A8;
 }
 
-.follow {
+.item__follow {
     background-color: #EBD8FF;
 }

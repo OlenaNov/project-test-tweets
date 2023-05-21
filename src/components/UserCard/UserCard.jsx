@@ -1,3 +1,4 @@
+import { ReactComponent as LogoSvg } from '../../images/Logo.svg';
 import { updateUser } from 'utilites/api';
 import css from './UserCard.module.css';
 
@@ -16,13 +17,15 @@ const UserCard = ({ item: { id, avatar, name, tweets, followers, isFollowing }, 
 
     return (
 
-        <>
-            <img src={avatar} alt={name} className={css.usersList__img} />
-            <h2>{name}</h2>
-            <p>{tweets} TWEETS</p>
-            <p>{followers.toLocaleString('en-US')} FOLLOWERS</p>
-            <button onClick={() => handleClick(id, followers, isFollowing)} className={isFollowing ? `${css.following}` : `${css.follow}`}>{isFollowing ? 'FOLLOWING' : 'FOLLOW'}</button>
-        </>
+        <div className={css.item__box}>
+            <LogoSvg className={css.item__icon} />
+            <img src={avatar} alt={name} className={css.item__img} />
+            <div className={css.item__boxContent}>
+                <p className={css.item__content}>{tweets} tweets</p>
+                <p className={css.item__content}>{followers.toLocaleString('en-US')} followers</p>
+            </div>
+            <button onClick={() => handleClick(id, followers, isFollowing)} className={isFollowing ? `${css.item__following} ${css.item__btn}` : `${css.item__follow} ${css.item__btn}`}>{isFollowing ? 'following' : 'follow'}</button>
+        </div>
     );
 };
 

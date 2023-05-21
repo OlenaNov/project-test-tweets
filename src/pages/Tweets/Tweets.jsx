@@ -1,6 +1,5 @@
-import UserList from "components/UsersList/UsersList";
+import UserList from "components/UsersList";
 import { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { fetchUsers } from "utilites/api";
 
@@ -43,9 +42,7 @@ const Tweets = () => {
 
     return (
         <>
-            <NavLink to='/'>Go back</NavLink>
-            {users.length !== 0 && <UserList items={users} updateStateUser={updateState}/>}
-            {users.length !== 0 && <button onClick={() => makeRequest(users)}>Load more...</button>}
+            {users.length !== 0 && <UserList items={users} makeMoreUsers={makeRequest} updateStateUser={updateState}/>}
         </>
     );
 };

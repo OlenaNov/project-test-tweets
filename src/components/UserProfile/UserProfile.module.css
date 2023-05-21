@@ -1,0 +1,33 @@
+.box {
+    display: flex;
+    gap: 40px;
+}
+
+.profileImg {
+    width: 300px;
+    height: 300px;
+
+    background-color: #EBD8FF;
+    box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+    border-radius: 20px;
+    border: solid 8px #5736A3;
+}
+
+.boxInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.profileName {
+    color: #471CA9;
+}
+
+.profileContent {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    color: #471CA9;
+}

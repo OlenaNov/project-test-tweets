@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 import UserCard from "components/UserCard/UserCard";
 import css from './UserList.module.css';
 
-const UserList = ({ items, updateStateUser }) => {
+const UserList = ({ items, makeMoreUsers, updateStateUser }) => {
 
     return (
+        <>
+        <Link to='/' className={css.linkGoBack}>Go back</Link>
         <ul className={css.usersList}>
         {items.map(item => {
             return (
@@ -12,9 +15,13 @@ const UserList = ({ items, updateStateUser }) => {
                 </li>
             )
         })
-
         }
         </ul>
+        <button 
+            onClick={() => makeMoreUsers(items)}
+            className={css.btnLoadMore}
+            >Load more...</button>
+        </>
     )
 };
 
