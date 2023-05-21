@@ -2,7 +2,7 @@
 
 Social platform design example.
 
-
+## Author: Olena Novitska
 
 ## This project was created with
 [Create React App](https://github.com/facebook/create-react-app).
@@ -11,3 +11,4 @@ Social platform design example.
 [CSS Modules](https://github.com/css-modules/css-modules).
 [React Router](https://reactrouter.com/en/main/start/overview).
 [Mockapi](https://mockapi.io/).
+[React Select](https://react-select.com/).

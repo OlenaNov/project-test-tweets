@@ -2,6 +2,7 @@ import UserList from "components/UsersList";
 import { useEffect, useRef, useState } from "react";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { fetchUsers } from "utilites/api";
+import Filter from "components/Filter";
 
 const Tweets = () => {
     const [users, setUsers] = useState([]);
@@ -40,8 +41,10 @@ const Tweets = () => {
         );
     };
 
+
     return (
         <>
+            <Filter onVisible={setUsers}/>
             {users.length !== 0 && <UserList items={users} makeMoreUsers={makeRequest} updateStateUser={updateState}/>}
         </>
     );

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import UserCard from "components/UserCard/UserCard";
+import UserCard from "components/UserCard";
 import css from './UserList.module.css';
 
 const UserList = ({ items, makeMoreUsers, updateStateUser }) => {
